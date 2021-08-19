@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Actividades</title>
+  <script>
+      function aleatorio()
+  {
+    bacan.style.height=100+"px";
+    escoger=Math.floor((Math.random() * (4-1))+1);
+
+if(escoger==1)
+    {
+      hola=Math.floor((Math.random() * (3-1))+1);
+      if(hola==1)
+      {
+        enunciado.innerHTML="·········(1) Verdadero  (2)Falso·········<br />Con los valores del primer(A1) y del segundo número(A2) de la sucesión, al darnos una posición(n) podemos encontrar el valor de dicha posición(An)";
+      }
+
+      if(hola==2)
+      {
+         num1=Math.floor((Math.random() * (11-1))+1);
+         num2=Math.floor((Math.random() * (11-1))+1);
+         posicion=Math.floor((Math.random() * (11-1))+1);
+
+         enunciado.innerHTML="<br />Encuentre el valor de An, si numero1("+num1+"), numero2("+num2+") y posición("+posicion+").";
+
+         d=num2-num1;
+         n=posicion-1;
+         m=n*d;
+         r=Math.round(parseInt(num1)+parseInt(m));
+      }
+
+    }
+ if(escoger==2)
+    {
+      hola2=Math.floor((Math.random() * (3-1))+1);
+      if(hola2==1)
+      {
+        enunciado.innerHTML="·········(1) Verdadero  (2)Falso·········<br />Con los valores del primer numero(A1), la posición(n) y el valor de la posición(An) se puede encontrar la diferencia";
+      }
+
+      if(hola2==2)
+      {
+        nuum1=Math.floor((Math.random() * (11-1))+1);
+        poosicion=Math.floor((Math.random() * (11-1))+1);
+        valor=Math.floor((Math.random() * (11-1))+1);
+
+       a=parseInt(valor)-parseInt(nuum1);
+       rr=(parseInt(poosicion)-1);
+       dd=Math.round(parseInt(a)/parseInt(rr));
+
+
+       enunciado.innerHTML="<br />Encuentre el valor de d, si numero1("+nuum1+"), posición("+poosicion+") y valor de dicha posición("+valor+").";
+       
+      }
+
+    }
+
+if (escoger==3) 
+    {
+      hola3=Math.floor((Math.random() * (3-1))+1);
+      if(hola3==1)
+      {
+        enunciado.innerHTML="·········(1) Verdadero  (2)Falso·········<br />Con los valores de diferencia(d), posición(n) y el valor en dicha posición(An) es posible encontrar el valor del primer término(A1).";
+      }
+
+      if(hola3==2)
+      {
+        distancia=Math.floor((Math.random() * (11-1))+1);
+        pos=Math.floor((Math.random() * (11-1))+1);
+        val=Math.floor((Math.random() * (11-1))+1);
+
+        nnn=pos-1;
+        mmm=nnn*distancia;
+        rrr=-parseInt(val)+parseInt(mmm);
+        linda=Math.round(-rrr);
+
+        enunciado.innerHTML="<br />Encuentre el valor de A1, si diferencia("+distancia+"), posición("+pos+") y valor de dicha posición("+val+").";
+
+
+      }
+
+    }
+  }
+
+ function ocultar()
+{
+ enunciado.style.display="none";
+ boton.style.display="none";
+ bacan.style.height=100+"px";
+}
+
+  </script>
+ </head>
+<style>
+  .titulo
+{
+  position: absolute;
+  top: -40px;
+  left: 360px;
+  font-size: 50px;
+font-family: Freestyle Script;
+color: black;
+}
+  .subtitulo
+{
+  position: absolute;
+  top: 85px;
+  left: 300px;
+  font-size: 25px;
+font-family: Ink Free;
+color: purple;
+}
+
+ .volver{
+  position: absolute;
+  top: 50px;
+  left: 50px;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #000000;
+    font-family: Ink Free;
+    transition: 0.5s;
+  }
+    .volver:hover
+  {
+    color: black;
+    background: #1B4F72; 
+  }
+  .respuesta
+  { 
+    position: absolute;
+    display: visibility;
+    top: 200px;
+    left: 270px;
+    height: 200px;
+    width: 800px;
+    background-color: black;
+    color: white;
+    font-size: 100px;
+font-family: Freestyle Script;
+border: none;
+  }  
+
+  .enunciado
+  { 
+    position: absolute;
+    display: visibility;
+    top: 200px;
+    left: 270px;
+    height: 205px;
+    width: 808px;
+    background-color: black;
+    color: white;
+    font-size: 45px;
+font-family: Freestyle Script;
+color: white;
+  }  
+  .boton
+  {
+    position: absolute;
+    display: visibility;
+  top: 450px;
+  left: 350px;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 50px;
+    color: white;
+    background-color: black;
+    font-family: Ink Free;
+    transition: 0.5s;
+  }
+     .boton:hover
+  {
+    color: black;
+    background: #1B4F72; 
+  }
+
+   .ver
+  {
+    position: absolute;
+    display: visibility;
+  top: 450px;
+  left: 350px;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 50px;
+    color: white;
+    background-color: black;
+    font-family: Ink Free;
+    transition: 0.5s;
+  }
+     .ver:hover
+  {
+    color: black;
+    background: #1B4F72; 
+  }
+
+  .siguiente
+  {
+    position: absolute;
+    display: visibility;
+  top: 450px;
+  left: 750px;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 50px;
+    color: white;
+    background-color: black;
+    font-family: Ink Free;
+    transition: 0.5s;
+  }
+     .siguiente:hover
+  {
+    color: black;
+    background: #1B4F72; 
+  }
+
+  .bacan
+  {
+    position: absolute;
+  top: 440px;
+  left: 750px;
+  height: 5px;
+  width: 218px;
+    background: transparent;
+   
+  }
+
+  .bueno
+  { 
+    position: absolute;
+    top: 200px;
+    left: 270px;
+    height: 200px;
+    width: 800px;
+    background:white;
+    color: green;
+    font-size: 150px;
+font-family: Freestyle Script;
+  }  
+
+   .malo
+  { 
+    position: absolute;
+    top: 200px;
+    left: 270px;
+    height: 200px;
+    width: 800px;
+    background:white;
+    color: red;
+    font-size: 110px;
+font-family: Freestyle Script;
+  }
+  .correccion
+  {
+    position: absolute;
+    top: 120px;
+    height: 50px;
+    background: none;
+    color: green;
+    font-family: Freestyle Script;
+    font-size: 70px;
+    width: 800px;
+  }
+
+</style>
+<body background="fondo.jfif" style="background-repeat: no-repeat;background-size: cover;" onload="aleatorio()">
+
+<div class="titulo"><center><h1>Aplicando conocimientos</h1></center></div>
+<div class="subtitulo"><center><h2>Aproxime la respuesta al decimal MÁS cercano</h2></center></div>
+<a class="volver" href="ir.html">Volver</a>
+
+<center><div class="malo" id="malo" name="malo">MALO ☹
+  <div class="correccion" id="correccion" name="correccion"></div>
+</div></center>
+
+<center><div class="bueno" id="bueno" name="bueno">¡CORRECTO!</div></center>
+<center><div class="cuadro" id="cuadro">
+  <input type="number" class="respuesta" placeholder="Escribe tu espuesta" id="respuesta"> 
+</div></center>
+
+<a type="button" class="ver" id="ver" name="ver" onclick="respuesta()">Verificar</a>
+
+<center><div class="enunciado" id="enunciado" name="enunciado"></div></center>
+<center><a type="button" id="boton" name="boton" class="boton" onclick="ocultar()" id="respuesta">Responder</a></center>
+
+<a class="siguiente" href="javascript:location.reload()"> Siguiente </a>
+<div class="bacan" id="bacan" name="bacan"></div>
+
+
+<script>
+
+  function respuesta() 
+      {
+        bacan.style.height=5+"px";
+        respuesta=document.getElementById('respuesta').value;
+
+  if (escoger==1&&hola==1) 
+     {
+       if(respuesta==1)
+     {
+      ver.style.display="none";
+      cuadro.style.display="none";
+     }
+     else
+     {
+      ver.style.display="none";
+      cuadro.style.display="none";
+      bueno.style.display="none";
+      correccion.innerHTML="Respuesta→(1)Verdadero";
+     }
+     }
+
+      if (escoger==1&&hola==2) 
+     {
+       if(respuesta==r)
+     {
+      ver.style.display="none";
+      cuadro.style.display="none";
+     }
+     else
+     {
+      ver.style.display="none";
+      cuadro.style.display="none";
+      bueno.style.display="none";
+      correccion.innerHTML="Respuesta→"+r;
+     }
+     }
+
+     if (escoger==2&&hola2==1) 
+     {
+       if(respuesta==1)
+     {
+      ver.style.display="none";
+      cuadro.style.display="none";
+     }
+     else
+     {
+      ver.style.display="none";
+      cuadro.style.display="none";
+      bueno.style.display="none";
+      correccion.innerHTML="Respuesta→(1)Verdadero";
+     }
+     }
+
+       if (escoger==2&&hola2==2) 
+     {
+       if(respuesta==dd)
+     {
+      ver.style.display="none";
+      cuadro.style.display="none";
+     }
+     else
+     {
+      ver.style.display="none";
+      cuadro.style.display="none";
+      bueno.style.display="none";
+      correccion.innerHTML="Respuesta→"+dd;
+     }
+     }
+
+     if (escoger==3&&hola3==1) 
+     {
+       if(respuesta==1)
+     {
+      ver.style.display="none";
+      cuadro.style.display="none";
+     }
+     else
+     {
+      ver.style.display="none";
+      cuadro.style.display="none";
+      bueno.style.display="none";
+      correccion.innerHTML="Respuesta→(1)Verdadero";
+     }
+     }
+
+     if (escoger==3&&hola3==2) 
+     {
+       if(respuesta==linda)
+     {
+      ver.style.display="none";
+      cuadro.style.display="none";
+     }
+     else
+     {
+      ver.style.display="none";
+      cuadro.style.display="none";
+      bueno.style.display="none";
+      correccion.innerHTML="Respuesta→"+linda;
+     }
+     }
+      }
+
+
+  
+</script>
+</body>
+</html>
+
+ 

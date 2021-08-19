@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ejercicio 3</title>
+ </head>
+ <script>r=0; n=0; m=0;</script>
+<style>
+  .titulo
+{
+  font-size: 50px;
+font-family: Freestyle Script;
+color: black;
+}
+
+.cuadro
+{
+position: absolute;
+top: 200px;
+left: 150px;
+width: 600px;
+height: 270px;
+background-color: black;
+font-size: 80px;
+font-family: Freestyle Script;
+color: white;
+ }
+
+ .proceso
+{
+position: absolute;
+top: 200px;
+left: 800px;
+width: 400px;
+height: 270px;
+background-color: #1B4F72;
+font-size: 20px;
+display: flex;
+  align-items: center;
+  justify-content: center;
+font-family: Ink Free;
+color: white;
+ }
+
+ .ver
+{
+position: absolute;
+  top: 190px;
+  left: 200px;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: black;
+    background-color: white;
+    font-family: Ink Free;
+    background-color: lightgray;
+    transition: 0.5s;
+}
+    .ver:hover
+  {
+    color: white;
+    background: gray; 
+  }
+
+ .volver{
+  position: absolute;
+  top: 50px;
+  left: 50px;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #000000;
+    font-family: Ink Free;
+    transition: 0.5s;
+  }
+   .volver:hover
+  {
+    color: black;
+    background: #1B4F72; 
+  }
+
+  .s1
+  {
+    background-color: lightblue;
+    font-family: Ink Free;
+    color: black;
+    font-size: 20%;
+  }
+  .nada
+ {
+  position: absolute;
+  top: 700px;
+  background: none;
+  height: 60px;
+  width: 100px;
+ }
+
+ .ecuacion
+{
+position: absolute;
+top: 500px;
+left: 150px;
+width: 1050px;
+height: 200px;
+background-color: #1B4F72;
+font-size: 20px;
+display: flex;
+  align-items: center;
+  justify-content: center;
+font-family: Ink Free;
+color: white;
+ }
+
+   .otra
+  {
+    position: absolute;
+  top: 390px;
+  left: 480px;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: black;
+    background-color: white;
+    font-family: Ink Free;
+    background-color: lightgray;
+    transition: 0.5s;
+  }
+     .otra:hover
+  {
+    color: white;
+    background: gray; 
+  }
+
+</style>
+
+<body background="fondo.jfif" style="background-repeat: no-repeat;background-size: cover;" >
+  <div class="titulo"><center><h1>Valor de la variable A1</h1></center></div>
+
+<center><div class="cuadro" id="cuadro">
+  <input class="s1" type="number" placeholder="Diferencia" id="distancia">
+  <input class="s1" type="number" placeholder="Posición"  id="posicion">
+  <input class="s1" type="number" placeholder="Valor en posición" id="valor"><br>
+  <input type="button" value="ver" class="ver" onclick="sucesion();"> 
+  <div id="cuadrito"></div>
+</div></center>
+<div class="proceso" id="proceso"><center>PROCESO REALIZADO</center></div>
+<div class="ecuacion" id="ecuacion" name="ecuacion"><center>ECUACIÓN ESPECÍFICA</center></div>
+<a class="volver" href="ir.html">Volver</a>
+<div class="nada"></div>
+<input type="button" value="Otra" class="otra" onclick="javascript:location.reload()">
+
+
+
+<script >
+
+  function sucesion(){
+   distancia=document.getElementById('distancia').value;
+   posicion=document.getElementById('posicion').value;
+   valor=document.getElementById('valor').value;
+
+   n=posicion-1;
+   m=n*distancia;
+   r=-parseInt(valor)+parseInt(m);
+   linda=-r;
+   nd=-distancia;
+   ecuecu=parseInt(linda)-parseInt(distancia);
+   cuadrito.innerHTML=-r;
+
+
+   proceso.innerHTML="PROCESO REALIZADO<br />An=A1+(n-1)·d<br />-A1=-An+(n-1)·d<br />-A1=-"+valor+"+("+posicion+"-1)·("+distancia+")<br />-A1=-"+valor+"+("+n+")·("+distancia+")<br />-A1=-"+valor+"+("+m+")<br />A1="+linda;
+
+   ecuacion.innerHTML="ECUACIÓN ESPECÍFICA<br />An=A1+(n-1)·d<br />An="+linda+"+(n-1)·("+distancia+")<br />An="+linda+"+("+distancia+"n)+("+nd+")<br />An="+ecuecu+"+("+distancia+"n)";
+  }
+  
+
+
+</script>
+</body>
+</html>
